@@ -3,6 +3,9 @@
 ## Unreleased
 
 ### Changed
+- Requires `passport ^0.2` (the first published release of the core; `^0.1` matched no tag).
+
+### Changed
 - Emails over 254 bytes and passwords over 1024 bytes are `ErrInvalidCredentials` without
   calling `VerifyFunc`, so oversized input cannot make the password hash do heavy work.
 
