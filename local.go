@@ -1,5 +1,5 @@
-// Package local implements login with email and password, like passport-local.
-// gtr package: passport-local.
+// Package local implements login with email and password, like passport-local in Node.js.
+// gtr package: @passport/local.
 //
 // The strategy knows nothing about your users table: you pass a
 // VerifyFunc that looks up the user (e.g. via orm.Repository)

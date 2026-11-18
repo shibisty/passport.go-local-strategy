@@ -1,12 +1,12 @@
-# passport-local
+# @passport/local
 
 Email and password login for [passport](https://github.com/shibisty/passport.go),
-the equivalent of passport-local.
+the equivalent of passport-local in Node.js.
 
 ## Installation
 
 ```bash
-gtr add github:shibisty/passport.go github:shibisty/passport.go-local-strategy
+gtr add passport @passport/local
 ```
 
 `passport` is a peer dependency (`^0.1`): the application adds it, and every strategy
@@ -14,7 +14,7 @@ plugs into the same `Authenticator`.
 
 ## Usage
 
-Import as `local "passport-local"` (Go package `local`), next to `"passport"`.
+Import as `local "passport/local"` (Go package `local`), next to `"passport"`.
 
 ```go
 a.Use(local.New(func(ctx context.Context, email, password string) (*passport.Identity, error) {
@@ -37,7 +37,7 @@ identity, err := a.Credential(ctx, "local", map[string]string{"email": e, "passw
 
 - The email is trimmed; an empty email or password, an email over 254 bytes or a password
   over 1024 bytes yields `ErrInvalidCredentials` without calling your function.
-- For argon2id or bcrypt hashes use [`passport-hash`](https://github.com/shibisty/passport.go-hash)
+- For argon2id or bcrypt hashes use [`@passport/hash`](https://github.com/shibisty/passport.go-hash)
   (`passhash.Verify` also accepts `passwordhash` hashes, and `NeedsRehash` upgrades them).
 - `Provider` is set to `"local"` if you did not set it.
 - Custom field names: `local.New(verify, local.WithFields("login", "pass"))`.

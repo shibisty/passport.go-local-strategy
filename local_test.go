@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	"passport"
-	local "passport-local"
+	local "passport/local"
 )
 
 var errDB = errors.New("db down")

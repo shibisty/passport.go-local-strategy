@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+### Changed
+- Renamed from `passport-local` to `@passport/local` (gtr ADR-0012): `gtr add @passport/local`, `import "passport/local"`; published to the gtr registry. Dependencies on other passport packages are registry ranges (`^0.2`) instead of `github:` sources.
+
 ## 0.1.1 — 2026-11-09
 
 ### Changed
